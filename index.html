@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business AI Playbook</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">THE AI OPERATING SYSTEM FOR BUSINESS OWNERS</p>
+      <h1>Business AI Playbook</h1>
+      <p class="subhead">
+        Roll out AI across every department without hiring or getting technical.
+      </p>
+      <div class="hero-actions">
+        <a href="https://www.instagram.com/danmartell/" target="_blank" rel="noreferrer" class="btn primary">Message "ELITE" on Instagram</a>
+        <button id="startGuide" class="btn secondary">Start Guided Plan</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h2>Find what you need fast</h2>
+        <input id="search" type="search" placeholder="Search prompts, steps, departments..." />
+        <p class="hint">Tip: search “marketing”, “ROI”, “RCCF”, or “risk radar”.</p>
+      </section>
+
+      <section class="panel" id="guidedPlan">
+        <h2>4-Part AI Deployment Playbook</h2>
+        <ol id="steps"></ol>
+      </section>
+
+      <section class="panel">
+        <h2>Master Prompt + RCCF</h2>
+        <details open>
+          <summary>Company Master Prompt Template</summary>
+          <pre id="masterPrompt"></pre>
+        </details>
+        <details>
+          <summary>RCCF Prompt Format</summary>
+          <pre id="rccfPrompt"></pre>
+        </details>
+      </section>
+
+      <section class="panel">
+        <h2>Department Prompt Library</h2>
+        <div id="tabs" class="tabs"></div>
+        <div id="promptCards" class="grid"></div>
+      </section>
+    </main>
+
+    <template id="stepTemplate">
+      <li class="step-card">
+        <div class="step-header">
+          <label>
+            <input type="checkbox" class="step-check" />
+            <span class="step-title"></span>
+          </label>
+          <span class="goal"></span>
+        </div>
+        <p class="summary"></p>
+        <ul class="checklist"></ul>
+        <p class="outcome"></p>
+      </li>
+    </template>
+
+    <template id="promptTemplate">
+      <article class="prompt-card">
+        <h3></h3>
+        <p class="setup"></p>
+        <ul class="items"></ul>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
